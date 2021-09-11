@@ -8,6 +8,9 @@
     <h1>Lista de pacientes en el LIS de perfil lipídico</h1>
     <!-- <a class="btn btn-primary" href="patients/create">CREAR PACIENTE</a> -->
     <h1>LISTADO DE PACIENTES</h1>
+    <div class="boton_volver">
+
+    <a href="/" class="btn btn-warning" >Volver</a>
     <table class="table table-striped table-hover" id="patients">
         <thead>
             <tr>

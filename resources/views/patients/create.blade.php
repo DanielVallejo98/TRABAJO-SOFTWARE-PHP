@@ -2,6 +2,7 @@
 
 @section('content')
     <h1>Formulario para la creación de pacientes.</h1>
+    
     <form action="/patients" method="POST">
         @csrf
         <div class="mb-3">

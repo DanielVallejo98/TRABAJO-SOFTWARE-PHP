@@ -7,7 +7,8 @@
     <h2>Sistema de Información del Laboratorio</h2>
     <a class="btn btn-primary" href="/patients/create">Ingresar paciente</a>
     <a class="btn btn-primary" href="/patients">Ver pacientes procesados</a>
-    <a class="btn btn-primary" href="#">Control de calidad</a>
-    <a class="btn btn-primary" href="#">Consultar resultados</a>
+    <a class="btn btn-primary" href="/control/create">Crear un control de calidad</a>
+    <a class="btn btn-primary" href="/control">Revisar control de calidad</a>
+    <a class="btn btn-primary" href="/ingreso">Consulte resultados paciente</a>
     
 @endsection

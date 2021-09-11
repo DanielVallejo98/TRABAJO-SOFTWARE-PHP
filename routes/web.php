@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\IngresoPatient;
 use App\Http\Controllers\PatientsController;
 use Illuminate\Support\Facades\Route;
 
@@ -16,7 +17,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', HomeController::class);
+Route::get('ingreso', IngresoPatient::class);
+Route::post('patients/cedula', 'App\Http\Controllers\PatientController@cedula')->name('patients.cedula');;
 Route::resource('patients', 'App\Http\Controllers\PatientController');
+
+Route::resource('control','App\Http\Controllers\ControlCalidad');
+//Route::post('control/create', 'App\Http\Controllers\PatientController');
 
 /* Route::get('patients/create', [PatientsController::class , 'create']);
 Route::get('patients/{name}', [PatientsController::class , 'show']);

@@ -89,16 +89,16 @@ class PatientController extends Controller
     {
         $patient = Patient::find($id);
 
-        $patients->documento = $request->get('documento');
-        $patients->nombre = $request->get('nombre');
-        $patients->apellido = $request->get('apellido');
-        $patients->genero = $request->get('genero');
-        $patients->edad = $request->get('edad');
-        $patients->eps = $request->get('eps');
-        $patients->LDL = $request->get('LDL');
-        $patients->HDL = $request->get('HDL');
-        $patients->trigliceridos = $request->get('trigliceridos');
-        $patients->coltotal = $request->get('coltotal');
+        $patient->documento = $request->get('documento');
+        $patient->nombre = $request->get('nombre');
+        $patient->apellido = $request->get('apellido');
+        $patient->genero = $request->get('genero');
+        $patient->edad = $request->get('edad');
+        $patient->eps = $request->get('eps');
+        $patient->LDL = $request->get('LDL');
+        $patient->HDL = $request->get('HDL');
+        $patient->trigliceridos = $request->get('trigliceridos');
+        $patient->coltotal = $request->get('coltotal');
 
         $patient->save();
 
@@ -116,6 +116,26 @@ class PatientController extends Controller
         $patient = Patient::find($id);
         $patient->delete();
         return redirect('/patients');
+
+    }
+    /**
+     * Remove the specified resource from storage.
+     *
+     * 
+     * @param  \Illuminate\Http\Request  $request
+     */
+    public function cedula(Request $request)
+    {
+        $cedula=$request->get('documento');
+        $patient = Patient::where('documento','=',$cedula)->get();
+        if($patient->count()!=0){
+            return view('patients.patient')->with('patient',$patient[0]);
+            //return $patient;
+        }else{
+            return redirect('/');
+        }
+ 
+        
     }
 
 }
