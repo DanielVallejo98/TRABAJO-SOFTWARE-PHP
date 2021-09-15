@@ -3,8 +3,9 @@
 
 @section('content')
 
-    <h1>Bienvenidos al LIS </h1>
-    <h2>Sistema de Información del Laboratorio</h2>
+    <img src="https://www.sanvicentefundacion.com/sites/default/files/articles/banner_laboratorio.jpg" class="img-fluid" alt="...">
+    <h1>¡ Bienvenidos !</h1>
+    <h2>Sistema de Información del Laboratorio Clinico</h2>
 
     <table>
     <tr>
