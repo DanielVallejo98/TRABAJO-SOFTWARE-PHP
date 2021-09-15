@@ -3,6 +3,8 @@
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\IngresoPatient;
 use App\Http\Controllers\PatientsController;
+use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\SessionsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,7 +18,26 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', HomeController::class);
+Route::get('/', HomeController::class)->middleware('auth');
+
+Route::get('/register', [RegisterController::class, 'create'])
+    ->middleware('guest')
+    ->name('register.index');
+    
+Route::post('/register', [RegisterController::class, 'store'])
+    ->name('register.store');
+
+Route::get('/login', [SessionsController::class, 'create'])
+    ->middleware('guest')
+    ->name('login.index');
+Route::post('/login', [SessionsController::class, 'store'])
+    ->name('login.store');
+
+Route::get('/logout', [SessionsController::class, 'destroy'])
+    ->middleware('auth')
+    ->name('login.destroy');
+
+
 Route::get('ingreso', IngresoPatient::class);
 Route::post('patients/cedula', 'App\Http\Controllers\PatientController@cedula')->name('patients.cedula');;
 Route::resource('patients', 'App\Http\Controllers\PatientController');
