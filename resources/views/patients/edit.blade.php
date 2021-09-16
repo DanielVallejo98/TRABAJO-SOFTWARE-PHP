@@ -1,12 +1,13 @@
 @extends('layouts.layout')
 
 @section('content')
-    <h1>Editar información del paciente.</h1>
-    <div class="boton_volver">
-
-    <a href="/patients" class="btn btn-warning" >Volver</a>
-</div>
-    <form action="/patients/{{$patient->id}}" method="POST">
+  <img src="https://www.bannerhealth.com/-/media/images/project/bh/institutes/heart-institute/_heart-institute-landing/banner_heart-landing_marquee_1600x400.ashx?h=400&w=1600&hash=414EA2AB39520911554A405D6CE884CD" class="img-fluid" alt="...">
+  <h1 class="text-center">Editar registro de paciente</h1>
+    
+  <div class="row">
+  <div class="col-2"></div>
+  <div class="col-8">
+  <form action="/patients/{{$patient->id}}" method="POST">
         @csrf
         @method('PUT')
         <div class="mb-3">
@@ -31,7 +32,7 @@
 
             <select name="genero" id="genero">
             @php
-            $generos= array('femenino','masculino');
+            $generos= array('Femenino','Masculino');
             
             @endphp
             @foreach($generos as $genero)
@@ -46,7 +47,7 @@
 
             <select name="eps" id="eps">
             @php
-            $epss= array('sura','saludcop');
+            $epss= array('Sura','Comfenalco', 'IPS Universitaria','Sanitas', 'Cafesalud', 'Aliansalud', 'Compensar EPS', 'Coomeva EPS', 'Coosalud', 'Cruz Blanca', 'Famisanar', 'Mutual Ser', 'Nueva EPS');
             @endphp
             @foreach($epss as $eps)
             <option value={{$eps}} {{ $patient->eps == $eps ? 'selected' : '' }} > {{ $eps}} </option>
@@ -56,23 +57,33 @@
           </div>
 
           <div class="mb-3">
-            <label for="" class="form-label">Colesterol total</label>
+            <label for="" class="form-label">Colesterol Total (mg/dL)</label>
             <input type="text" class="form-control" id="coltotal" name="coltotal"  value="{{$patient->coltotal}}">
           </div>
           <div class="mb-3">
-            <label for="" class="form-label">LDL</label>
+            <label for="" class="form-label">Lipoproteina de Baja Densidad [LDL] (mg/dL)</label>
             <input type="text" class="form-control" id="LDL" name="LDL"  value="{{$patient->LDL}}">
           </div>
           <div class="mb-3">
-            <label for="" class="form-label">HDL</label>
+            <label for="" class="form-label">Lipoproteina de Alta Densidad [HDL] (mg/dL)</label>
             <input type="text" class="form-control" id="HDL" name="HDL"  value="{{$patient->HDL}}">
           </div>
           <div class="mb-3">
-            <label for="" class="form-label">Triglicéridos</label>
+            <label for="" class="form-label">Triglicéridos (mg/dL)</label>
             <input type="text" class="form-control" id="trigliceridos" name="trigliceridos"  value="{{$patient->trigliceridos}}">
           </div>
           <a href="/patients" class="btn btn-secondary">Cancelar</a>
         <button type="submit" class="btn btn-primary">Guardar</button>
       </form>
+
+  </div>
+  <div class="col-2"></div>
+  </div>
+
+
+
+
+
+    
 @endsection
 

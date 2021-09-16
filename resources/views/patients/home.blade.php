@@ -9,11 +9,11 @@
 
     <table>
     <tr>
-    <td><a class="btn btn-primary" href="/patients/create">Ingresar paciente</a></td>
-    <td><a class="btn btn-primary" href="/patients">Ver pacientes procesados</a></td>
-    <td><a class="btn btn-primary" href="/control/create">Crear un control de calidad</a></td>
-    <td><a class="btn btn-primary" href="/control">Revisar control de calidad</a></td>
-    <td><a class="btn btn-primary" href="/ingreso">Consulte resultados paciente</a></td>
+    <td><a class="btn btn-primary" style="margin-right:22px;" href="/patients/create">Registrar paciente</a></td>
+    <td><a class="btn btn-primary" style="margin-right:22px;" href="/patients">Ver pacientes registrados</a></td>
+    <td><a class="btn btn-primary" style="margin-right:22px;"href="/control/create">Parametros control de calidad</a></td>
+    <td><a class="btn btn-primary" style="margin-right:22px;"href="/control">Gestion control de calidad</a></td>
+    <td><a class="btn btn-primary" href="/ingreso">Consultar resultados</a></td>
 </tr>    
 </table>
 @endsection

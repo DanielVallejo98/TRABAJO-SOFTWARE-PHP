@@ -22,7 +22,7 @@
           color: red;
         }
       </style> --}}
-    <title>@yield('title') - Laravel App</title>
+    <title>@yield('title') - Home </title>
   </head>
   <body style="background-color: rgb(235, 231, 231)">
     <nav class="navbar navbar-expand-sm navbar-dark" style="background-color: rgb(161, 194, 255)">
@@ -46,7 +46,7 @@
                 <ul class="nav navbar-nav ml-auto">
                   @if(auth()->check())
                     <li> <p class="fs-6 mt-2 px-5">Bienvenido: <b>{{auth()->user()->name}}</b></p> </li>
-                    <li class="nav-item px-1"><a class="nav-link" href={{route("login.destroy")}} style="color: rgb(236, 5, 5);">Cerrar sesión</a></li>
+                    <li class="nav-item px-1"><a class="nav-link" href={{route("login.destroy")}} style="color: rgb(236, 5, 5);"><p class="fw-bold">Cerrar sesión</p></a></li>
                   @else
                     <li class="nav-item px-1"><a class="nav-link" href={{route("login.index")}} style="color: black;">Ingresar</a></li>
                     <li class="nav-item px-1"><a class="nav-link" href={{route("register.index")}} style="color: black;">Registrarse</a></li>

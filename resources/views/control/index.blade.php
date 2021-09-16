@@ -5,15 +5,9 @@
 @endsection
 
 @section('content')
-    <h1>Registro control de calidad</h1>
-    <div class="boton_volver">
-    <!-- <a class="btn btn-primary" href="patients/create">CREAR PACIENTE</a> -->
+    <img src="https://www.ecci.edu.co/sites/default/files/styles/imagen_banner_programa_1920x527_/public/2018-07/banner%20cursos-01.jpg?itok=SMi6Vy18" class="img-fluid" alt="...">
+    <h1 class="text-center my-5">Seguimiento - Control de calidad</h1>
 
-    
-
-    <a href="/" class="btn btn-warning" >Volver</a>
-
-    
     <table class="table table-striped table-hover control_calidad" id="coltotal">
         <thead>
         <tr>
@@ -202,6 +196,16 @@
 
         </tbody>
     </table>
+    <div class="row my-4">
+        <div class="col-11">
+        </div>
+        <div class="col-1">
+            <div class="boton_volver">
+            <a href="/" class="btn btn-warning" >Volver</a>
+            </div>
+        </div>
+    </div> 
+    
     
 @endsection
 

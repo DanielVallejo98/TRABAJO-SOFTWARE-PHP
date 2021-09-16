@@ -5,12 +5,10 @@
 @endsection
 
 @section('content')
-    <h1>Lista de pacientes en el LIS de perfil lipídico</h1>
     <!-- <a class="btn btn-primary" href="patients/create">CREAR PACIENTE</a> -->
-    <h1>LISTADO DE PACIENTES</h1>
-    <div class="boton_volver">
-
-    <a href="/" class="btn btn-warning" >Volver</a>
+    <img src="https://www.sanvicentefundacion.com/sites/default/files/articles/banner_laboratorio.jpg" class="img-fluid" alt="...">
+    <h1 class="text-center">Pacientes registrados</h1>
+    
     <table class="table table-striped table-hover" id="patients">
         <thead>
             <tr>
@@ -43,6 +41,17 @@
             @endforeach
         </tbody>
       </table>
+
+    <div class="row my-4">
+        <div class="col-11">
+        </div>
+        <div class="col-1">
+            <div class="boton_volver"> 
+            <a href="/" class="btn btn-warning" >Volver</a>
+            </div>
+        </div>
+    </div>  
+
 @endsection
 
 @section('js')
